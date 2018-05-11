@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<!--
+	Photon by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>2 Birds 1 Bee</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <!-- bxSlider Javascript file -->
+        
+        
+        <script>
+            var quotes = [
+                    '"It was such a <span class="bold">great and informative program, Matt is such a fabulous speaker"<br><br>- Year 10 Student',
+                    '<span class="italic">"To be honest, when I saw we had a talk about sex, I wasn\'t very excited as we have been taught about this so much, and they only ever repeat themselves. <span class="bold">This talk was different.</span>"</span><br><br>- Year 10 Student',
+                    '<span class="italic">"The presentation was <span class="bold">perfectly suited for our group</span>. It was an engaging, entertaining and interesting presentation that taught me new things about the LGBTQIA+ community. I walked into the presentation thinking that I already knew most of the content but I walked out a little <span class="bold">mind-blown</span> about the sheer complexity of the topic. <span class="bold">It was a really valuable and informative experience.</span>"</span><br><br>- Year 10 Student',
+                    '"It was such a great and informative program, Matt is such a fabulous speaker"<br><br>- Year 10 Student',
+                    '"To be honest, when I saw we had a talk about sex, I wasn\'t very excited as we have been taught about this so much, and they only ever repeat themselves. This talk was different.<br><br>- Year 10 Student',
+                '"What Matt is doing is so inspiring and I\'m really glad to see that someone has decided to give teenagers an education that isn\'t on the line that is brought to them by a normal school education.<br><br>- Year 10 Student"',
+                    ];
+                
+                    var i = 0;
+
+					 var slideshow = setInterval( function() { slideRight() }, 5000);
+                    
+					$( '.fa-arrow-left' ).click(function() {
+ 						clearInterval(slideshow);
+						slideLeft();
+						console.log("Left");
+                        
+					});
+
+					$( '.fa-arrow-right' ).click(function() {
+						clearInterval(slideshow);
+						slideRight();
+						console.log("Right");
+                        
+					});
+
+					function slideRight() {
+						i++
+                        if (i == quotes.length) {
+                            i = 0;
+                        }
+                        else {
+							$("#textslide").html(quotes[i]);
+                        }
+					}
+
+					function slideRight() {					
+					 	i--
+                        if (i < 0) {
+                            i = quotes.length;
+                        }
+                        else {
+                             $("#textslide").html(quotes[i]);;
+                        }
+					}
+                   
+        </script>
+        
+	</head>
+	<body>
+
+		<!-- Header -->
+			<section id="header">
+				<div class="inner">
+					<!--<span class="icon major fa-cloud"></span>
+					<h1>Hi, I'm Matt and I run a sex education business!</h1>
+					<p>Based in Sydney, Australia -- Focused on educating High School Students</p>-->
+					<ul class="actions">
+						<li><a href="#one" class="button scrolly">What is 2 Birds 1 Bee?</a></li>
+                        <li><a href="#two" class="button scrolly">Testimonials</a></li>
+                        <li><a href="#three" class="button scrolly">Workshops</a></li>
+                        <li><a href="#four" class="button scrolly">Who is Matt?</a></li>
+					</ul>
+				</div>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="main style1">
+				<div class="container">
+					<div class="row 150%">
+						<div class="6u 12u$(medium)">
+							<header class="major">
+								<h2>What is 2 Birds 1 Bee?!</h2>
+							</header>
+                            <p>2 Birds 1 Bee is a youth-run educational project that engages with young people in areas of sexuality and relationships. It brings often taboo conversations to the table and provides the skills and awareness to challenge the taboos and inspire empathy.</p>
+						</div>
+						<div class="6u$ 12u$(medium) important(medium)">
+							<span class="image fit"><img src="images/header2.jpg" alt="" /></span>
+						</div>
+					</div>
+					<header class="major">
+					<h2>Goal and Philosophy</h2>
+					</header>
+					<p>'2 Birds 1 Bee' is a play on both the 'birds and bees' and 'hitting two birds with one stone' metaphors. Through the singular 'stone' (bee?) of workshops, we not only provide educational content but also spark conversations, dealing with issues and taking the sting out of taboos in one swoop!
+						2B1B takes on topics that aren't covered in curricula and usually aren't talked about at all. The workshop topics reflect the modern world, with all its new challenges and advantages.
+						Most institutions' knee-jerk reaction to any conversation involving sex and young people is to shut it down and limit as much information as possible for as long as possible. 2 Birds 1 Bee is not like most institutions. Following on from the fundamental belief in the capabilities of young people, this organisation is all about:
+					
+
+					<ul>
+									<li>Equipping young people with skills and information</li>
+									<li>Engaging them to think critically and empathetically</li>
+									<li>Starting conversations</li>
+								</ul> 
+                    
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="main style2 special">
+				<div class="inner">
+					<header class="major">
+						<h1>Testimonials</h1>
+					</header>
+					<div>
+						
+						<p class="pad">
+						</i>	<span class="italic" id="textslide">"It was such a <span class="bold">great and informative program</span>, Matt is such a fabulous speaker"<br><br>- Year 10 Student'</p></span>
+					</div>
+					<i id="slide-left" class="fa fa-arrow-left button" aria-hidden="true"></i><i id="slide-right" class="fa fa-arrow-right button" aria-hidden="true"></i>
+				</div>
+			</section>
+
+		<!-- Three -->
+			<section id="three" class="main style1 special">
+				<div class="container">
+					<header class="major">
+						<h2>Workshops</h2>
+					</header>
+					<p>The workshops are constantly being reviewed, improved and adapted, and new workshops will soon be available! Feel free to suggest workshop topics  via the contact page</p>
+					<div class="row 150%">
+						<div class="4u 12u$(medium)">
+							<span class="image fit"><img src="images/XXX.jpeg" alt="" /></span>
+							<h3>XXXposed - Bringing Porn Out From Beneath the Covers</h3>
+                            <h4>Target: Years 8-12</h4>
+							<p>This workshop is designed to correct the myths created by porn in three key areas – body image, gender roles, and ‘sexpectations’ – and to discuss the growing issue of porn addiction.</p>
+							<ul class="actions">
+								<!--<li><a href="#" class="button">More</a></li>-->
+							</ul>
+						</div>
+						<div class="4u 12u$(medium)">
+							<span class="image fit"><img src="images/LGBT.png" alt="" /></span>
+							<h3>LGBTQIA...WTF? - Gender and Sexuality Diversity</h3>
+                            <h4>Target: Years 8-12</h4>
+							<p>What do those letters actually mean? And more importantly – who are the people behind them? This workshop provides a small overview of different gender and sexuality identifications, highlighting statistics and the big issues facing each group. It finishes with the vital discussion of why such labels can be so important to those who identify with them, and what can be done to support them.</p>
+							<ul class="actions">
+								<!--<li><a href="#" class="button">More</a></li>-->
+							</ul>
+						</div>
+						<div class="4u$ 12u$(medium)">
+							<span class="image fit"><img src="images/ebirds.png" alt="" /></span>
+							<h3>The e-birds and iBees - Talking to your children about porn</h3>
+                            <h4>Target: Parents and Caregivers</h4>
+							<p>This workshop is very flexible and with enough information and notice can be adapted to reflect the particular concerns of the school. The base of the presentation content is rethinking sex-education, young people and pornography and parents and sex education.</p>
+							<ul class="actions">
+								<!--<li><a href="#" class="button">More</a></li>-->
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Four -->
+			<section id="four" class="main style2 special">
+				<div class="container">
+                    <header class="major">
+                    <h2>Matthew Friedman</h2>
+                    </header>
+                    <div class="row 150%">
+						<div class="6u 12u$(medium)">
+                        <span class="image fit"><img src="images/matt-head" alt="" /></span>
+                    </div>
+                <div class="6u$ 12u$(medium)">
+                    <br>
+        
+                <p>Matt Friedman is an experienced facilitator, and works with hundreds of young people each year in various capacities. He founded 2 Birds 1 Bee in 2016, the year after graduating high school, and is passionate about fixing the gaping hole in education. Matt also volunteers with Jewish Care in delivering the nationally-coordinated Love Bites program on sexual assault and relationship violence, as well as serving on the executive of UN Youth NSW, a youth-run educational NGO.
+
+When he has a spare minute, Matt remembers that he is studying a double Bachelor of Arts and Economics.</p>
+					<ul class="actions uniform">
+						<li><a href="mailto:birds1bee@outlook.com.au?Subject=2birds1bee" class="button special">Contact Me!</a></li>
+					</ul>
+				</div>   
+			</section>
+
+		
+
+		<!-- Footer -->
+			<section id="footer">
+				<ul class="icons">
+					<li><a href="https://www.facebook.com/TwoBirdsOneBee/" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="mailto:birds1bee@outlook.com.au?Subject=2birds1bee" class="icon alt fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; 2birds1bee</li><li>Design: <a href="http://sudo-code.com">Sudo-Code Software</a></li>
+				</ul>
+			</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
